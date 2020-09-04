@@ -66,7 +66,7 @@ if (Open3D_FOUND)
     endif()
     if(WIN32 AND ENABLE_GUI)
         message("Will copy SDL2.dll to ${CMAKE_CURRENT_BINARY_DIR}/Release")
-e       add_custom_command(TARGET camera_pose_trajectory POST_BUILD
+        add_custom_command(TARGET camera_pose_trajectory POST_BUILD
                         COMMAND ${CMAKE_COMMAND} -E copy
                                 ${CMAKE_INSTALL_PREFIX}/lib/SDL2.dll
                                 ${CMAKE_CURRENT_BINARY_DIR}/Release)
