@@ -2,7 +2,7 @@
 A simple program to test linking Open3D and other libraries on different platforms.
 
 ## Open3D version tested 
-1.10.0
+0.10.0 (or the lastest version retrieved on 09/03/2020)
 
 ## Current behavior (09/03/2020)
 ### macOS
