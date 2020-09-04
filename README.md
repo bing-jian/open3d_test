@@ -17,7 +17,9 @@ camera_pose_trajectory: Warning: SetUsageMessage() never called
 ```
 
 ### ubuntu
-Failed when USE_GFLAGS is on.  Succeeded when USE_GFLAGS is off. 
+Failed when USE_GFLAGS is on.  Succeeded when USE_GFLAGS is off. (behavior with Open3D 0.10.0)
+
+*** Updates: Same code (well, almost same) and CMakeLists.txt worked when using Open3D 0.9.0 ***
 
 ```
 MakeFiles/camera_pose_trajectory.dir/camera_pose_trajectory.cpp.o: In function `_GLOBAL__sub_I__ZN3fLS16FLAGS_trajectoryE':
