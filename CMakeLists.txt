@@ -16,14 +16,9 @@ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${Open3D_C_FLAGS}")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${Open3D_CXX_FLAGS}")
 set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} ${Open3D_EXE_LINKER_FLAGS}")
 
-find_package(Eigen3 REQUIRED)
-include_directories(${EIGEN3_INCLUDE_DIRS})
-message(STATUS "eigen_include -> ${EIGEN3_INCLUDE_DIRS}")
-
 
 find_package(gflags REQUIRED)
 include_directories(${gflags_INCLUDE_DIR})
-
 
 # Set OS-specific things here
 if(WIN32)
@@ -39,9 +34,9 @@ if(WIN32)
 elseif(CYGWIN)
 elseif(APPLE)
 elseif(UNIX)
-	add_definitions(-DUNIX)
-	add_compile_options(-Wno-deprecated-declarations)
-	add_compile_options(-Wno-unused-result)
+    add_definitions(-DUNIX)
+    add_compile_options(-Wno-deprecated-declarations)
+    add_compile_options(-Wno-unused-result)
     add_definitions(-O3)
 endif(WIN32)
 
@@ -71,7 +66,7 @@ if (Open3D_FOUND)
     endif()
     if(WIN32 AND ENABLE_GUI)
         message("Will copy SDL2.dll to ${CMAKE_CURRENT_BINARY_DIR}/Release")
-        add_custom_command(TARGET camera_pose_trajectory POST_BUILD
+e       add_custom_command(TARGET camera_pose_trajectory POST_BUILD
                         COMMAND ${CMAKE_COMMAND} -E copy
                                 ${CMAKE_INSTALL_PREFIX}/lib/SDL2.dll
                                 ${CMAKE_CURRENT_BINARY_DIR}/Release)
